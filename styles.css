@@ -1,0 +1,160 @@
+body{
+    background-color: #81689f;
+}
+#player {
+    border-radius: 20px;
+    text-align: center;
+    background-color: #282828;
+    height: 95vh;
+    margin: 5px;
+    margin-top: 15px;
+}
+#player a{
+    background-color: #282828;
+    color: #efefef;
+    margin: 10px;
+    cursor: pointer;
+}
+#player a:hover{
+    color: #81689f;
+}
+.controlers{
+    margin: 15px;
+}
+#player img{
+    border-radius: 10px;
+    width: 80%;
+    margin: 37px;
+    border: solid 3px #81689f;
+}
+#songName{
+    color: aliceblue;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+audio {
+    padding: 5px;
+    width: 300px;
+    height: 40px;
+    border-radius: 25px;
+    outline: none;
+    background-color: #81689f;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+#playlist {
+    list-style-type: none;
+    padding: 2px 0;
+    /* margin: 0; */
+    background-color: #282828;
+    color: white;
+    border-radius: 10px;
+    margin-top: 5px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 11.5rem;
+}
+#playlist::-webkit-scrollbar {
+    width: 12px;
+}
+
+#playlist::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
+
+#playlist::-webkit-scrollbar-track {
+    background-color: #444;
+}
+#playlist li {
+    padding: 7px 11px;
+    border-bottom: 1px solid #44444475;
+    display: flex;
+    justify-content: space-between;
+}
+#playlist i{
+    cursor: pointer;
+    font-size: 13px;
+    color:#797575;
+}
+#playlist i:hover {
+    color: #efefef;
+}
+#playlist li:last-child {
+    border-bottom: none;
+}
+#playlist li:hover{
+    background-color: #4444444f;
+}
+#playlist img {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+}
+#searchInput{
+    padding: 20px;
+    background-color: #282828;
+    width: 100%;
+    margin: 5px;
+    margin-bottom: 10px;
+    border-radius: 11px;
+    color: white;
+}
+#songFile {
+    display: none; /* Hide the file input element */
+}
+#startButton {
+    margin: auto;
+    padding: 10px;
+    border-radius: 100%;
+    background-color: black;
+    }
+#startButton:hover{
+    padding: 13px;
+}
+#shuffleButton{
+    padding: 10px;
+    font-size: 19px;
+    color: #444444db;
+}
+#shuffleButton:hover{
+    font-size: 23px;
+    color: white;
+}
+#startButton i{
+    color: aliceblue;
+    margin: auto;
+    padding: 7px;
+}
+label {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #4444;
+    color: #fff;
+    cursor: pointer; /* Change the cursor when hovering over the label */
+}
+.intro img{
+    border-radius: 10px;
+    width: 80%;
+    margin: 37px;
+    border: solid 3px #81689f;
+}
+.intro{
+    color: #81689f;
+    background-color: #282828;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+.intro p{
+    color: aliceblue;
+}
+.container{
+    width: 90%;
+}
+.intro .col-md-8{
+    padding-top: 36px;
+}
