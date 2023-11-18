@@ -24,7 +24,7 @@ body{
 #player img{
     border-radius: 10px;
     width: 80%;
-    margin: 37px;
+    margin: 37px 0;
     border: solid 3px #81689f;
 }
 #songName{
@@ -155,6 +155,7 @@ label {
 .container{
     width: 90%;
 }
-.intro .col-md-8{
+.intro .col-lg-8{
     padding-top: 36px;
+    padding-left: 20px;
 }

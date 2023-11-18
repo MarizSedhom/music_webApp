@@ -1,4 +1,4 @@
-
+// Array of song objects, each containing a URL, name, and image
 var songs = [
     {url: "./music/yt1s.com - Lana Del Rey  Say Yes To Heaven Official Audio.mp3", name: "Lana Del Rey  Say Yes To Heaven", image: "./img/lana.jpg"},
     {url: "./music/yt1s.com - Fujii Kaze  Shinunoga EWa Lyrics.mp3", name: "Fujii Kaze  Shinunoga EWa", image:"./img/fuji.jpg"},
@@ -12,6 +12,7 @@ var currentSongIndex = 0;
 var repeat = false;
 var shuffled = false;
 
+// Function to toggle shuffle mode
 function shuffleSongs() {
     shuffled = !shuffled;
     if(shuffled){
@@ -22,12 +23,14 @@ function shuffleSongs() {
     }
     
 }
+// Function to start playing the first song in the playlist
 function startPlaying() {
     if (!audioPlayer.src) {
         currentSongIndex = 0;
     }
     playSong(songs[currentSongIndex]);
 }
+// Function to toggle repeat mode
 function toggleRepeat() {
     repeat = !repeat;
     if(repeat){
@@ -37,6 +40,7 @@ function toggleRepeat() {
         document.getElementById('repeat').style.color='white'
     } 
 }
+// Function to play a specific song
 function playSong(song) {
     audioPlayer.src = song.url;
     songImage.src = song.image; 
@@ -62,6 +66,7 @@ function playSong(song) {
     };
     updatePlaylistDisplay();
 }
+// Function to play the next song in the playlist
 function nextSong() {
     currentSongIndex++;
     if (currentSongIndex > songs.length - 1) {
@@ -70,6 +75,7 @@ function nextSong() {
     playSong(songs[currentSongIndex]);
 }
 
+// Function to play the previous song in the playlist
 function previousSong() {
     currentSongIndex--;
     if (currentSongIndex < 0) {
@@ -77,16 +83,18 @@ function previousSong() {
     }
     playSong(songs[currentSongIndex]);
 }
-
+// Function to add a new song to the playlist
 function addSong(url, name, image) {
     songs.push({url: url, name: name, image: image});
     updatePlaylistDisplay();
 }
+// Function to remove the current song from the playlist
 function removeCurrentSong() {
     // Remove the current song from the songs array
     songs.splice(currentSongIndex, 1);
     updatePlaylistDisplay();
 }
+// Function to add a song from a file input
 function addSongFromFile() {
     var fileInput = document.getElementById('songFile');
     var file = fileInput.files[0];
@@ -99,6 +107,7 @@ function addSongFromFile() {
    updatePlaylistDisplay();
    fileInput.value = '';
 }
+// Function to update the playlist display in the UI
 function updatePlaylistDisplay() {
     playlistDiv.innerHTML = '';
     for (var i = 0; i < songs.length; i++) {
@@ -142,6 +151,7 @@ function updatePlaylistDisplay() {
     }
   searchFunction();
 }
+// Function to filter and display songs based on a search input
 function searchFunction() {
   var input, filter, ul, li, a, i, txtValue;
   input = document.getElementById('searchInput');
